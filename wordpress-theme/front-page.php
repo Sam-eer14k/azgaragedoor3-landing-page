@@ -1,0 +1,918 @@
+﻿<?php
+/**
+ * Front page template for AZ Garage Door.
+ *
+ * @package AZ_Garage_Door
+ */
+
+get_header();
+?>
+<a class="skip" href="#main">Skip to main content</a>
+
+<!-- ================================ topbar ================================ -->
+<div class="topbar">
+  <div class="wrap topbar__in">
+    <ul class="topbar__list">
+      <li>
+        <span class="live">
+          <span class="live__dot" aria-hidden="true"></span>
+          Open now
+        </span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <span>Every day, any hour</span>
+      </li>
+      <li class="topbar__mail">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        <a href="mailto:service@azgaragedoor.com">service@azgaragedoor.com</a>
+      </li>
+    </ul>
+    <div class="social" aria-label="AZ Garage Door elsewhere">
+      <a href="https://www.facebook.com/azgaragedoorrepair" target="_blank" rel="noopener noreferrer" aria-label="AZ Garage Door on Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.25-1.5 1.55-1.5h1.65V4.6A22 22 0 0 0 14.3 4.5c-2.4 0-4 1.45-4 4.12v2.28H7.6V14h2.7v8z"/></svg>
+      </a>
+      <a href="sms:4808211111" aria-label="Text AZ Garage Door">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg>
+      </a>
+      <a href="tel:4808211111" aria-label="Call AZ Garage Door on 480-821-1111">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ================================ header ================================ -->
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="logo" href="#hero" aria-label="AZ Garage Door, back to top">
+      <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/az-logo.png" alt="AZ Garage Door" width="320" height="76" fetchpriority="high">
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <ul class="nav__list">
+        <li><a href="#services">Repairs</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#check">Is it safe?</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#area">Areas</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <a class="hdr__call" href="tel:4808211111">
+      <span class="hdr__call-ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"/></svg>
+      </span>
+      <span>
+        <span class="hdr__call-txt">Call or text, any hour</span>
+        <span class="hdr__call-num">480-821-1111</span>
+      </span>
+    </a>
+
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="drawer__scrim" data-close></div>
+  <div class="drawer__panel">
+    <div class="drawer__top">
+      <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/az-logo.png" alt="AZ Garage Door" width="244" height="58">
+      <button class="drawer__x" type="button" data-close aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <nav aria-label="Mobile">
+      <ul class="drawer__nav">
+        <li><a href="#services">Repairs</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#check">Is it safe?</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#area">Areas</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="drawer__foot">
+      <a class="btn" href="tel:4808211111">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"/></svg>
+        Call 480-821-1111
+      </a>
+      <a class="btn btn--dark" href="sms:4808211111">Text us instead</a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ================================= hero ================================= -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <picture>
+        <source media="(max-width:700px)" srcset="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/hero-900.jpg">
+        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/hero.jpg"
+             alt="A technician kneeling at an open garage door, working on the bottom hinge with tools laid out beside him"
+             width="1600" height="1000" fetchpriority="high" decoding="async">
+      </picture>
+    </div>
+
+    <div class="wrap hero__in">
+      <div class="hero__c">
+        <p class="eyebrow" data-rise style="--i:0">Phoenix valley, since 2011</p>
+
+        <h1>
+          <span class="ln" data-rise style="--i:1"><span>Garage doors fixed</span></span>
+          <span class="ln" data-rise style="--i:2"><span>at the price we</span></span>
+          <span class="ln" data-rise style="--i:3"><span><em>said on the phone</em></span></span>
+        </h1>
+
+        <p class="hero__sub" data-rise style="--i:4">
+          Springs, openers, cables and tracks, across the valley at any hour.
+          You get a number before we drive out, and that number is what ends up on the invoice.
+        </p>
+
+        <div class="hero__acts" data-rise style="--i:5">
+          <span class="mag"><a class="btn" href="tel:4808211111">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"/></svg>
+            Call 480-821-1111
+          </a></span>
+          <span class="mag"><a class="btn btn--ghost" href="#services">
+            What we repair
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a></span>
+        </div>
+
+        <p class="hero__trust" data-rise style="--i:6">
+          <span>Since 2011</span>
+          <span>2,400+ doors repaired</span>
+          <span>5-year spring warranty</span>
+          <span>No trip fee</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <i></i>
+    </div>
+  </section>
+
+  <!-- ============================ promise cards ============================ -->
+  <section class="promise" aria-label="How we quote">
+    <div class="wrap">
+      <div class="promise__grid">
+
+        <article class="promise__c" data-rv="up">
+          <span class="promise__n" aria-hidden="true">01</span>
+          <span class="promise__ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </span>
+          <h2>One price,<br>start to finish</h2>
+          <p>We quote on the phone and put it in writing before anyone touches the door. The number does not move once the technician sees the job.</p>
+          <a class="promise__go" href="#pricing">See the prices
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+        </article>
+
+        <article class="promise__c" data-rv="up">
+          <span class="promise__n" aria-hidden="true">02</span>
+          <span class="promise__ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17h2l2-7h10l2 7h2"/><circle cx="8" cy="19.5" r="1.6"/><circle cx="16" cy="19.5" r="1.6"/><path d="M12 3v5M9.5 5.5 12 8l2.5-2.5"/></svg>
+          </span>
+          <h2>Free to get<br>us out</h2>
+          <p>The drive and the estimate cost nothing, whether you go ahead or send us home. There is no trip fee and no after-hours rate.</p>
+          <a class="promise__go" href="tel:4808211111">Book a look
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+        </article>
+
+        <article class="promise__c" data-rv="up">
+          <span class="promise__n" aria-hidden="true">03</span>
+          <span class="promise__ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4 6v6c0 4.4 3.2 8.2 8 9 4.8-.8 8-4.6 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
+          </span>
+          <h2>Springs covered<br>five years</h2>
+          <p>Every spring we fit carries a five-year replacement warranty. If one breaks inside that window you pay nothing for the part or the labour.</p>
+          <a class="promise__go" href="#faq">Read the terms
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================== services =============================== -->
+  <section class="sec" id="services" aria-labelledby="svcH">
+    <div class="wrap">
+      <div class="sec__head sec__head--split" data-rv="up">
+        <div>
+          <p class="eyebrow">What we repair</p>
+          <h2 class="h2" id="svcH">Six jobs, in the order the phone rings</h2>
+        </div>
+        <p class="lede">
+          Most calls are one of these six. Pick the one that sounds like your door and it opens up.
+          If you can tell us the noise it made before it stopped, we can usually name the part before we arrive.
+        </p>
+      </div>
+
+      <div class="svc" id="svc">
+
+        <article class="svc__p" data-open="true">
+          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/placeholders/work-spring.jpg" alt="" loading="lazy" decoding="async" width="400" height="280">
+          <button class="svc__btn" type="button" aria-expanded="true">
+            <span class="svc__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 8c2-3 4-3 6 0s4 3 6 0 4-3 4 0"/><path d="M4 16c2-3 4-3 6 0s4 3 6 0 4-3 4 0"/></svg>
+            </span>
+            <span class="svc__price">From $175 per spring</span>
+            <h3>Broken springs</h3>
+            <span class="svc__body"><span>The bang you heard was a torsion spring giving out. The door is now far heavier than it looks and the opener cannot lift it safely, so leave it shut until we get there.</span></span>
+          </button>
+        </article>
+
+        <article class="svc__p" data-open="false">
+          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/placeholders/work-opener.jpg" alt="" loading="lazy" decoding="async" width="400" height="280">
+          <button class="svc__btn" type="button" aria-expanded="false">
+            <span class="svc__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="8" width="18" height="9" rx="2"/><path d="M12 8V4M8 21h8"/></svg>
+            </span>
+            <span class="svc__price">From $129</span>
+            <h3>Opener repair</h3>
+            <span class="svc__body"><span>Motor runs and nothing moves, or the remote does nothing at all. Usually a stripped drive gear, a dead logic board, or a wall button that has given up.</span></span>
+          </button>
+        </article>
+
+        <article class="svc__p" data-open="false">
+          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/placeholders/work-track.jpg" alt="" loading="lazy" decoding="async" width="400" height="280">
+          <button class="svc__btn" type="button" aria-expanded="false">
+            <span class="svc__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M6 3v18M18 3v18"/><circle cx="12" cy="9" r="2.5"/><circle cx="12" cy="16" r="2.5"/></svg>
+            </span>
+            <span class="svc__price"><!-- CLIENT TO CONFIRM: starting price -->[Price TBC]</span>
+            <h3>Track and rollers</h3>
+            <span class="svc__body"><span>A door that judders, grinds, or sits crooked in the opening. We straighten the track, swap the worn rollers, and check the door still balances before we leave.</span></span>
+          </button>
+        </article>
+
+        <article class="svc__p" data-open="false">
+          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/placeholders/work-seal.jpg" alt="" loading="lazy" decoding="async" width="400" height="280">
+          <button class="svc__btn" type="button" aria-expanded="false">
+            <span class="svc__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M6 16V8h12v8"/><path d="M4 16h16M4 20h16"/></svg>
+            </span>
+            <span class="svc__price"><!-- CLIENT TO CONFIRM: starting price -->[Price TBC]</span>
+            <h3>Seals and weather strip</h3>
+            <span class="svc__body"><span>Dust, heat and daylight coming in under the door through a Phoenix summer. A new bottom seal and side strip brings the garage back closer to the rest of the house.</span></span>
+          </button>
+        </article>
+
+        <article class="svc__p" data-open="false">
+          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/placeholders/work-double-door.jpg" alt="" loading="lazy" decoding="async" width="400" height="280">
+          <button class="svc__btn" type="button" aria-expanded="false">
+            <span class="svc__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 21V9l9-6 9 6v12z"/><path d="M3 13h18M3 17h18M12 9v12"/></svg>
+            </span>
+            <span class="svc__price"><!-- CLIENT TO CONFIRM: starting price -->[Price TBC]</span>
+            <h3>New door installation</h3>
+            <span class="svc__body"><span>When the panels are past saving, we measure, order and hang the replacement, then take the old door away with us.</span></span>
+          </button>
+        </article>
+
+        <article class="svc__p" data-open="false">
+          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/placeholders/work-carriage.jpg" alt="" loading="lazy" decoding="async" width="400" height="280">
+          <button class="svc__btn" type="button" aria-expanded="false">
+            <span class="svc__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M13 2 4.5 13H11l-1 9 8.5-11H12z"/></svg>
+            </span>
+            <span class="svc__price">Same rate, any hour</span>
+            <h3>Car shut inside</h3>
+            <span class="svc__body"><span>Door down, car in, and somewhere you need to be. Say that when you call and it goes to the front of the list. Midnight costs what Tuesday lunchtime costs.</span></span>
+          </button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================== pricing =============================== -->
+  <section class="sec sec--paper" id="pricing" aria-labelledby="priH">
+    <div class="wrap">
+      <div class="sec__head" data-rv="up">
+        <p class="eyebrow">What it costs</p>
+        <h2 class="h2" id="priH">Pick the job, see the number</h2>
+        <p class="lede">
+          Most shops make you book a visit before they will talk money. Here is ours in public,
+          so you can compare before the phone rings.
+        </p>
+      </div>
+
+      <div class="est" id="est">
+        <div class="est__opts" role="radiogroup" aria-label="Choose a repair">
+          <button class="est__o" type="button" role="radio" aria-checked="true"
+                  data-price="$449" data-note="Two springs fitted, labour included. This is the one we get called out for most.">
+            <span class="est__tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+            <span>
+              <b>A pair of springs</b>
+              <span>$175 each, plus $99 labour</span>
+            </span>
+          </button>
+
+          <button class="est__o" type="button" role="radio" aria-checked="false"
+                  data-price="$274" data-note="One spring fitted with labour. We will tell you honestly whether the other one is close behind.">
+            <span class="est__tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+            <span>
+              <b>A single spring</b>
+              <span>$175 for the spring, plus $99 labour</span>
+            </span>
+          </button>
+
+          <button class="est__o" type="button" role="radio" aria-checked="false"
+                  data-price="$89" data-note="Sensor realignment. If the door reverses straight back up, this is usually all it needs.">
+            <span class="est__tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+            <span>
+              <b>Sensor realignment</b>
+              <span>Flat rate, whatever the door</span>
+            </span>
+          </button>
+
+          <button class="est__o" type="button" role="radio" aria-checked="false"
+                  data-price="$129" data-note="Opener repair starts here. Parts get quoted separately before we fit anything.">
+            <span class="est__tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+            <span>
+              <b>Opener repair</b>
+              <span>Starting price, parts quoted on top</span>
+            </span>
+          </button>
+
+          <!-- CLIENT TO CONFIRM: prices for track work, seals and new door installs.
+               Leaving them out of the estimator rather than guessing. -->
+          <button class="est__o" type="button" role="radio" aria-checked="false"
+                  data-price="Call" data-note="Track work, seals and new doors get quoted on the phone once we know the door. [CLIENT TO CONFIRM starting prices]">
+            <span class="est__tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+            <span>
+              <b>Something else</b>
+              <span>Tracks, seals, a whole new door</span>
+            </span>
+          </button>
+        </div>
+
+        <div class="est__out">
+          <p class="est__label">Starting at</p>
+          <p class="est__fig" id="estFig">$449</p>
+          <p class="est__note" id="estNote">Two springs fitted, labour included.</p>
+
+          <p class="est__lock">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            <span>Whatever we say on the phone is what you pay. We do not add a surcharge once the technician is standing in your driveway.</span>
+          </p>
+
+          <span class="mag" style="display:block"><a class="btn" href="tel:4808211111">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"/></svg>
+            Call 480-821-1111
+          </a></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ troubleshooter ============================ -->
+  <section class="sec" id="check" aria-labelledby="chkH">
+    <div class="wrap">
+      <div class="sec__head" style="text-align:center" data-rv="up">
+        <p class="eyebrow" style="justify-content:center">Before you touch it</p>
+        <h2 class="h2" id="chkH" style="margin-inline:auto">Is the door safe to use?</h2>
+        <p class="lede" style="margin-inline:auto">
+          Four questions, the same ones we ask on the phone. It takes about twenty seconds
+          and it might save you a repair bill on top of the one you already have.
+        </p>
+      </div>
+
+      <div class="tro" id="tro" data-rv="zoom">
+        <div class="tro__bar" role="presentation"><i style="width:33%"></i></div>
+        <div class="tro__in" aria-live="polite">
+          <!-- rendered by JS, and the section still reads fine without it -->
+          <p class="tro__step">Question 1 of 2</p>
+          <h3 class="tro__q">What is the door doing right now?</h3>
+          <div class="tro__opts">
+            <button class="tro__o" type="button" data-go="stuck">It will not open at all</button>
+            <button class="tro__o" type="button" data-go="bang">I heard a loud bang</button>
+            <button class="tro__o" type="button" data-go="track">It is crooked or off its track</button>
+            <button class="tro__o" type="button" data-go="trapped">My car is shut inside</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================ process ================================ -->
+  <section class="sec sec--navy" aria-labelledby="procH">
+    <div class="wrap">
+      <div class="sec__head" data-rv="up">
+        <p class="eyebrow">How a call goes</p>
+        <h2 class="h2" id="procH">Four steps, no surprises in the middle</h2>
+      </div>
+
+      <div class="proc">
+        <div class="proc__line" aria-hidden="true"><i></i></div>
+
+        <div class="proc__s" data-rv="up">
+          <span class="proc__n" aria-hidden="true">1</span>
+          <h3>You call or text</h3>
+          <p>Any hour, including nights and weekends. Tell us what the door did and what it sounded like.</p>
+        </div>
+
+        <div class="proc__s" data-rv="up">
+          <span class="proc__n" aria-hidden="true">2</span>
+          <h3>We price it there</h3>
+          <p>You get the number on that call, not after a visit. It goes in writing before we start.</p>
+        </div>
+
+        <div class="proc__s" data-rv="up">
+          <span class="proc__n" aria-hidden="true">3</span>
+          <h3>The owner turns up</h3>
+          <p>The person who quoted you is the person who does the work. No handover, no sales visit first.</p>
+        </div>
+
+        <div class="proc__s" data-rv="up">
+          <span class="proc__n" aria-hidden="true">4</span>
+          <h3>Fixed and written up</h3>
+          <p>You pay what we quoted, and the spring warranty gets written on the invoice in your name.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================= about ================================= -->
+  <section class="sec" id="about" aria-labelledby="abtH">
+    <div class="wrap">
+      <div class="about__top">
+        <div data-rv="left">
+          <p class="eyebrow">Who turns up</p>
+          <h2 class="h2" id="abtH">One valley, one van, fourteen years</h2>
+          <p class="lede">
+            It started in 2011 with a single van, a stock of the springs that break most often,
+            and a route around Phoenix. The route grew east as word got round. The way we quote
+            has not changed since the first job.
+          </p>
+        </div>
+        <div class="counter" data-rv="right">
+          <b data-count="2400">0</b>
+          <span>doors repaired<br>across the valley</span>
+        </div>
+      </div>
+
+      <div class="tl">
+        <div class="tl__track" aria-hidden="true"><div class="tl__fill"></div></div>
+        <div class="tl__row">
+
+          <div class="tl__item" data-rv="up">
+            <span class="tl__dot" aria-hidden="true"></span>
+            <span class="tl__yr">2011</span>
+            <h3>One van, one city</h3>
+            <p>Started taking calls around Phoenix with a van and a rack of common torsion springs.</p>
+          </div>
+
+          <div class="tl__item" data-rv="up">
+            <span class="tl__dot" aria-hidden="true"></span>
+            <span class="tl__yr">The years after</span>
+            <h3>East across the valley</h3>
+            <p>Scottsdale first, then Tempe, Mesa and Chandler as people passed the number on.</p>
+          </div>
+
+          <div class="tl__item" data-rv="up">
+            <span class="tl__dot" aria-hidden="true"></span>
+            <span class="tl__yr">Today</span>
+            <h3>Same five cities, same rate</h3>
+            <p>Still owner operated, still quoting on the phone, and still answering it at three in the morning.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="callout" data-rv="up">
+        <span class="callout__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+        </span>
+        <div>
+          <h3>We tell you what we are not</h3>
+          <p>
+            AZ Garage Door is a repair service, not a licensed contractor, and we would rather you
+            heard that from us than found out later. If a job needs a licensed trade we say so and
+            point you at someone who holds the licence, even though that means turning down the work.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================== why us =============================== -->
+  <section class="sec sec--paper" id="why" aria-labelledby="whyH">
+    <div class="wrap">
+      <div class="sec__head" data-rv="up">
+        <p class="eyebrow">Why the second call comes back to us</p>
+        <h2 class="h2" id="whyH">None of this is a slogan</h2>
+        <p class="lede">Each one is something you can hold us to on the invoice.</p>
+      </div>
+
+      <div class="bento">
+
+        <article class="bento__c bento__c--wide" data-rv="up">
+          <span class="bento__ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </span>
+          <div>
+            <h3>Three in the morning costs what Tuesday costs</h3>
+            <p>No night rate, no weekend rate, no holiday rate. The clock does not change the number we gave you.</p>
+          </div>
+        </article>
+
+        <article class="bento__c bento__c--photo bento__c--tall" data-rv="zoom">
+          <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/hero-900.jpg" alt="The owner working on a residential garage door" loading="lazy" decoding="async" width="900" height="562">
+          <div class="owner">
+            <b>Owner operated</b>
+            <span>The person who quotes it is the person who fixes it</span>
+          </div>
+        </article>
+
+        <article class="bento__c" data-rv="up">
+          <span class="bento__fig">5 yr</span>
+          <div>
+            <h3>On every spring</h3>
+            <p>Replacement warranty, registered in your name on the invoice.</p>
+          </div>
+        </article>
+
+        <article class="bento__c" data-rv="up">
+          <span class="bento__fig">$0</span>
+          <div>
+            <h3>To get us out</h3>
+            <p>No trip fee and no call-out charge, even if you send us away.</p>
+          </div>
+        </article>
+
+        <article class="bento__c bento__c--wide" data-rv="up">
+          <span class="bento__ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 7h16M4 12h10M4 17h7"/><circle cx="18.5" cy="16.5" r="3.5"/><path d="m21.5 19.5 1.5 1.5"/></svg>
+          </span>
+          <div>
+            <h3>We tell you when it does not need fixing</h3>
+            <p>Sometimes the sensor has been nudged and the answer is free. We would rather say that and keep the next call than sell you a part you did not need.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= service area ============================= -->
+  <section class="sec" id="area" aria-labelledby="areaH">
+    <div class="wrap area">
+      <div data-rv="left">
+        <p class="eyebrow">Where we go</p>
+        <h2 class="h2" id="areaH">Five cities, one route</h2>
+        <p class="lede">
+          Phoenix and Scottsdale are the daily run, with Tempe, Mesa and Chandler covered from the same van.
+          If you are just outside, ring and ask. We will give you a straight yes or no rather than take the booking and hope.
+        </p>
+        <div class="chips">
+          <button class="chip" type="button" data-zone="phoenix"><i aria-hidden="true"></i>Phoenix</button>
+          <button class="chip" type="button" data-zone="scottsdale"><i aria-hidden="true"></i>Scottsdale</button>
+          <button class="chip" type="button" data-zone="tempe"><i aria-hidden="true"></i>Tempe</button>
+          <button class="chip" type="button" data-zone="mesa"><i aria-hidden="true"></i>Mesa</button>
+          <button class="chip" type="button" data-zone="chandler"><i aria-hidden="true"></i>Chandler</button>
+        </div>
+      </div>
+
+      <div data-rv="right">
+        <!-- Not a survey map. The cities sit in roughly their real positions
+             relative to each other: Phoenix west, Scottsdale north east,
+             Tempe in the middle, Mesa east, Chandler south. -->
+        <svg class="map" viewBox="0 0 520 420" role="img" aria-labelledby="mapT mapD">
+          <title id="mapT">Areas AZ Garage Door covers</title>
+          <desc id="mapD">A simple diagram of the Phoenix valley showing the five cities covered: Phoenix, Scottsdale, Tempe, Mesa and Chandler.</desc>
+
+          <g class="grid" aria-hidden="true">
+            <path d="M30 150h460M30 250h460M30 330h460M160 40v350M300 40v350M390 40v350"
+                  stroke="#dfe3ee" stroke-width="1.5" stroke-dasharray="5 7" fill="none"/>
+          </g>
+
+          <rect class="zone" data-z="phoenix"    x="34"  y="108" width="124" height="140" rx="7"/>
+          <rect class="zone" data-z="scottsdale" x="304" y="42"  width="150" height="150" rx="7"/>
+          <rect class="zone" data-z="tempe"      x="166" y="196" width="124" height="112" rx="7"/>
+          <rect class="zone" data-z="mesa"       x="300" y="200" width="154" height="118" rx="7"/>
+          <rect class="zone" data-z="chandler"   x="166" y="316" width="176" height="88"  rx="7"/>
+
+          <circle class="pin" data-z="phoenix"    cx="96"  cy="152" r="8"/>
+          <circle class="pin" data-z="scottsdale" cx="379" cy="88"  r="8"/>
+          <circle class="pin" data-z="tempe"      cx="228" cy="238" r="8"/>
+          <circle class="pin" data-z="mesa"       cx="377" cy="242" r="8"/>
+          <circle class="pin" data-z="chandler"   cx="254" cy="352" r="8"/>
+
+          <text class="zlbl" data-z="phoenix"    x="96"  y="186" text-anchor="middle">Phoenix</text>
+          <text class="zlbl" data-z="scottsdale" x="379" y="122" text-anchor="middle">Scottsdale</text>
+          <text class="zlbl" data-z="tempe"      x="228" y="272" text-anchor="middle">Tempe</text>
+          <text class="zlbl" data-z="mesa"       x="377" y="276" text-anchor="middle">Mesa</text>
+          <text class="zlbl" data-z="chandler"   x="254" y="386" text-anchor="middle">Chandler</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================== reviews =============================== -->
+  <section class="sec sec--paper" id="reviews" aria-labelledby="revH">
+    <div class="wrap">
+      <div class="sec__head" style="display:flex;align-items:end;justify-content:space-between;gap:32px;flex-wrap:wrap" data-rv="up">
+        <div>
+          <p class="eyebrow">What people said after</p>
+          <h2 class="h2" id="revH">Reviews from around the valley</h2>
+        </div>
+        <div class="arrows">
+          <button class="arrow" id="revPrev" type="button" aria-label="Previous review" aria-controls="revRail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M19 12H5m6 6-6-6 6-6"/></svg>
+          </button>
+          <button class="arrow" id="revNext" type="button" aria-label="Next review" aria-controls="revRail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="rev__rail" id="revRail" tabindex="0" role="region" aria-label="Customer reviews, scrollable">
+
+        <article class="rev__c">
+          <span class="rev__q" aria-hidden="true">&rdquo;</span>
+          <div class="stars" role="img" aria-label="Five out of five">
+            <svg style="--s:0" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 6.8L12 17.8 5.7 21l1.3-6.8-5-4.8 7-.9z"/></svg>
+            <svg style="--s:1" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 6.8L12 17.8 5.7 21l1.3-6.8-5-4.8 7-.9z"/></svg>
+            <svg style="--s:2" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 6.8L12 17.8 5.7 21l1.3-6.8-5-4.8 7-.9z"/></svg>
+            <svg style="--s:3" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 6.8L12 17.8 5.7 21l1.3-6.8-5-4.8 7-.9z"/></svg>
+            <svg style="--s:4" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 6.8L12 17.8 5.7 21l1.3-6.8-5-4.8 7-.9z"/></svg>
+          </div>
+          <blockquote>Spring went at seven in the morning with my car shut in. Quoted me $449 on the phone, turned up before lunch, and $449 is what I paid. No talking me into anything else.</blockquote>
+          <footer class="rev__who">
+            <span class="rev__av" aria-hidden="true">DR</span>
+            <span><b>Dana R.</b><span>Mesa, spring replacement</span></span>
+          </footer>
+        </article>
+
+        <article class="rev__c">
+          <span class="rev__q" aria-hidden="true">&rdquo;</span>
+          <div class="stars" role="img" aria-label="Five out of five">
+            <svg style="--s:0" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 6.8L12 17.8 5.7 21l1.3-6.8-5-4.8 7-.9z"/></svg>
+            <svg style="--s:1" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 6.8L12 17.8 5.7 21l1.3-6.8-5-4.8 7-.9z"/></svg>
+            <svg style="--s:2" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 6.8L12 17.8 5.7 21l1.3-6.8-5-4.8 7-.9z"/></svg>
+            <svg style="--s:3" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 6.8L12 17.8 5.7 21l1.3-6.8-5-4.8 7-.9z"/></svg>
+            <svg style="--s:4" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 6.8L12 17.8 5.7 21l1.3-6.8-5-4.8 7-.9z"/></svg>
+          </div>
+          <blockquote>Two other places wanted a callout fee before they would even look. These guys came out, found the sensor was just knocked sideways, straightened it and charged me the $89.</blockquote>
+          <footer class="rev__who">
+            <span class="rev__av" aria-hidden="true">MT</span>
+            <span><b>Marcus T.</b><span>Scottsdale, opener repair</span></span>
+          </footer>
+        </article>
+
+        <!-- CLIENT TO ADD REAL REVIEW -->
+        <article class="rev__c rev__c--empty">
+          <p>Room for the next one.<br>Send over a Google review and it goes here.</p>
+        </article>
+
+        <!-- CLIENT TO ADD REAL REVIEW -->
+        <article class="rev__c rev__c--empty">
+          <p>Room for the next one.<br>Send over a Google review and it goes here.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================== faq ================================== -->
+  <section class="sec" id="faq" aria-labelledby="faqH">
+    <div class="wrap">
+      <div class="sec__head" style="text-align:center" data-rv="up">
+        <p class="eyebrow" style="justify-content:center">Before you call</p>
+        <h2 class="h2" id="faqH" style="margin-inline:auto">The questions we get asked most</h2>
+      </div>
+
+      <div class="faq" data-rv-stag>
+
+        <div class="faq__i is-open">
+          <button class="faq__q" type="button" aria-expanded="true" aria-controls="a1">
+            How fast can you actually get here?
+            <span class="faq__pm" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a" id="a1"><div>
+            <p><!-- CLIENT TO CONFIRM: typical response window. -->[Confirm the usual response time, for example "most calls inside X hours".] Broken springs and cars shut in go to the front of the list. Call and we will give you a real window rather than a vague promise, and if we cannot make it today we will say so on the phone instead of booking you in and missing it.</p>
+          </div></div>
+        </div>
+
+        <div class="faq__i">
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="a2">
+            What does flat pricing actually mean?
+            <span class="faq__pm" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a" id="a2"><div>
+            <p>It means the number you hear on the phone is the number on the invoice. We put it in writing before the work starts, and we do not add anything once the technician has seen the door. If we get there and the job turns out to be different from what you described, we stop and requote before touching anything, so you always get the choice.</p>
+          </div></div>
+        </div>
+
+        <div class="faq__i">
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="a3">
+            Why replace both springs when only one broke?
+            <span class="faq__pm" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a" id="a3"><div>
+            <p>The pair goes on at the same time and wears at the same rate, so when one lets go the other is usually close behind. Doing both while the door is already open costs you one labour charge instead of two. You can have just the one done if you would rather, and we will note it on the invoice so there is no argument later.</p>
+          </div></div>
+        </div>
+
+        <div class="faq__i">
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="a4">
+            What exactly does the spring warranty cover?
+            <span class="faq__pm" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a" id="a4"><div>
+            <p>Springs we supply and fit are covered for five years. If one breaks in that time we come back and replace it, and you pay nothing for the part or the labour. It gets written on your invoice in your name at the time of fitting. <!-- CLIENT TO CONFIRM -->[Confirm whether the warranty transfers if the house is sold.]</p>
+          </div></div>
+        </div>
+
+        <div class="faq__i">
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="a5">
+            Do you charge more at night or on weekends?
+            <span class="faq__pm" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a" id="a5"><div>
+            <p>No. Same rate at two in the morning as at two in the afternoon, weekends and holidays included. There is no trip fee either, so getting us out to look costs nothing whether you go ahead with the work or not.</p>
+          </div></div>
+        </div>
+
+        <div class="faq__i">
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="a6">
+            How can I pay?
+            <span class="faq__pm" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a" id="a6"><div>
+            <p><!-- CLIENT TO CONFIRM: accepted payment methods. -->[Confirm which methods you take: cash, card, check, bank transfer, and whether payment is due on completion.]</p>
+          </div></div>
+        </div>
+
+        <div class="faq__i">
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="a7">
+            Are you a licensed contractor?
+            <span class="faq__pm" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a" id="a7"><div>
+            <p>No, and we say so up front. AZ Garage Door is a repair service. We fix springs, openers, cables, tracks and seals, and we install replacement doors. Anything that needs a licensed trade, such as structural or electrical work beyond the opener, we hand to somebody who holds the licence rather than take it on ourselves.</p>
+          </div></div>
+        </div>
+
+        <div class="faq__i">
+          <button class="faq__q" type="button" aria-expanded="false" aria-controls="a8">
+            Which areas do you cover?
+            <span class="faq__pm" aria-hidden="true"></span>
+          </button>
+          <div class="faq__a" id="a8"><div>
+            <p>Phoenix, Scottsdale, Tempe, Mesa and Chandler. Phoenix and Scottsdale are the core daily route and the other three come off the same run. For the outer suburbs, ring and ask. We would rather tell you no on the phone than waste your afternoon.</p>
+          </div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================ cta band ================================ -->
+  <section class="cta" aria-labelledby="ctaH">
+    <div class="wrap cta__in">
+      <div data-rv="left">
+        <h2 id="ctaH">Door stuck, or a car shut inside?</h2>
+        <p>Call or text any hour. You get the price before we set off.</p>
+      </div>
+      <div class="cta__acts" data-rv="right">
+        <span class="mag"><a class="btn btn--white" href="tel:4808211111">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"/></svg>
+          Call 480-821-1111
+        </a></span>
+        <span class="mag"><a class="btn btn--ghost" href="sms:4808211111">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg>
+          Text us
+        </a></span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================================= footer ================================= -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__grid">
+
+      <div class="ftr__logo">
+        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/az-logo.png" alt="AZ Garage Door" width="362" height="86" loading="lazy">
+        <p>Garage door repair across the Phoenix valley since 2011. Owner operated, priced on the phone, and answering it at any hour.</p>
+        <div class="social" aria-label="AZ Garage Door elsewhere">
+          <a href="https://www.facebook.com/azgaragedoorrepair" target="_blank" rel="noopener noreferrer" aria-label="AZ Garage Door on Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.25-1.5 1.55-1.5h1.65V4.6A22 22 0 0 0 14.3 4.5c-2.4 0-4 1.45-4 4.12v2.28H7.6V14h2.7v8z"/></svg>
+          </a>
+          <a href="sms:4808211111" aria-label="Text AZ Garage Door">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg>
+          </a>
+          <a href="tel:4808211111" aria-label="Call AZ Garage Door">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Repairs</h3>
+        <ul class="ftr__list">
+          <li><a href="#services">Broken springs</a></li>
+          <li><a href="#services">Opener repair</a></li>
+          <li><a href="#services">Track and rollers</a></li>
+          <li><a href="#services">Seals and strip</a></li>
+          <li><a href="#services">New door install</a></li>
+          <li><a href="#services">Car shut inside</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>The page</h3>
+        <ul class="ftr__list">
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#check">Is it safe?</a></li>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#area">Service areas</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Get hold of us</h3>
+        <ul class="ftr__contact">
+          <li>
+            <span class="ftr__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"/></svg>
+            </span>
+            <span>
+              <b><a href="tel:4808211111">480-821-1111</a></b>
+              <small>Call or text, day or night</small>
+            </span>
+          </li>
+          <li>
+            <span class="ftr__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            </span>
+            <span>
+              <a href="mailto:service@azgaragedoor.com">service@azgaragedoor.com</a>
+              <small>We read it, but the phone is faster</small>
+            </span>
+          </li>
+          <li>
+            <span class="ftr__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            </span>
+            <span>
+              Phoenix, Scottsdale, Tempe, Mesa and Chandler
+              <small>Ring us if you are just outside</small>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="ftr__base">
+      <p>&copy; <span id="yr">2026</span> AZ Garage Door. All rights reserved.</p>
+      <p class="ftr__disc">AZ Garage Door is a repair service and not a licensed contractor.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <div class="callbar__in">
+    <a class="btn" href="tel:4808211111">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"/></svg>
+      Call 480-821-1111
+    </a>
+    <a class="btn btn--dark btn--sm" href="sms:4808211111" aria-label="Text AZ Garage Door">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg>
+    </a>
+  </div>
+</div>
+
+<button class="top" id="top-btn" type="button" aria-label="Back to top">
+  <svg class="top__ring" viewBox="0 0 56 56" aria-hidden="true">
+    <circle class="bg" cx="28" cy="28" r="24"/>
+    <circle class="fg" cx="28" cy="28" r="24"/>
+  </svg>
+  <svg class="top__arw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 19V5m-7 7 7-7 7 7"/></svg>
+</button>
+
+
+
+<?php
+get_footer();
